@@ -104,8 +104,13 @@ type Systemd::Unit::Service = Struct[
     Optional['RuntimeDirectory']          => String,
     Optional['RuntimeDirectoryMode']      => Stdlib::Filemode,
     Optional['StateDirectory']            => String,
+    Optional['StateDirectoryMode']        => Stdlib::Filemode,
     Optional['LogsDirectory']             => String,
     Optional['LogsDirectoryMode']         => Stdlib::Filemode,
+    Optional['ConfigurationDirectory']    => String,
+    Optional['ConfigurationDirectoryMode'] => Stdlib::Filemode,
+    Optional['CacheDirectory']            => String,
+    Optional['CacheDirectoryMode']        => Stdlib::Filemode,
     Optional['LogRateLimitIntervalSec']   => Variant[Pattern[/^[0-9]+(s|min|h|ms|us)?$/]],
     Optional['LogRateLimitBurst']         => Variant[Integer[0], Pattern[/^[0-9]+$/]],
     Optional['ProtectSystem']             => Variant[Boolean, Enum['full', 'strict']],
@@ -144,5 +149,6 @@ type Systemd::Unit::Service = Struct[
     Optional['LoadCredentialEncrypted']   => Variant[String[0],Array[String[0],1]],
     Optional['SetCredential']             => Variant[String[0],Array[String[0],1]],
     Optional['SetCredentialEncrypted']    => Variant[String[0],Array[String[0],1]],
+    Optional['SecureBits']                => Variant[Enum[''], Enum['keep-caps', 'keep-caps-locked', 'no-setuid-fixup', 'no-setuid-fixup-locked','noroot', 'noroot-locked'], Array[Enum['keep-caps', 'keep-caps-locked', 'no-setuid-fixup', 'no-setuid-fixup-locked', 'noroot', 'noroot-locked']]],
   }
 ]
