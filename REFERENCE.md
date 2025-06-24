@@ -3362,8 +3362,13 @@ Struct[{
     Optional['RuntimeDirectory']          => String,
     Optional['RuntimeDirectoryMode']      => Stdlib::Filemode,
     Optional['StateDirectory']            => String,
+    Optional['StateDirectoryMode']        => Stdlib::Filemode,
     Optional['LogsDirectory']             => String,
     Optional['LogsDirectoryMode']         => Stdlib::Filemode,
+    Optional['ConfigurationDirectory']     => String,
+    Optional['ConfigurationDirectoryMode'] => Stdlib::Filemode,
+    Optional['CacheDirectory']             => String,
+    Optional['CacheDirectoryMode']         => Stdlib::Filemode,
     Optional['LogRateLimitIntervalSec']   => Variant[Pattern[/^[0-9]+(s|min|h|ms|us)?$/]],
     Optional['LogRateLimitBurst']         => Variant[Integer[0], Pattern[/^[0-9]+$/]],
     Optional['ProtectSystem']             => Variant[Boolean, Enum['full', 'strict']],
@@ -3675,4 +3680,3 @@ Properties to retrieve from the unit
 Data type: `String[1]`
 
 Name of the unit
-
