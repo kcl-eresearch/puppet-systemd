@@ -3407,6 +3407,7 @@ Struct[{
     Optional['LoadCredentialEncrypted']   => Variant[String[0],Array[String[0],1]],
     Optional['SetCredential']             => Variant[String[0],Array[String[0],1]],
     Optional['SetCredentialEncrypted']    => Variant[String[0],Array[String[0],1]],
+    Optional['SecureBits']                => Variant[Enum[''], Enum['keep-caps', 'keep-caps-locked', 'no-setuid-fixup', 'no-setuid-fixup-locked','noroot', 'noroot-locked'], Array[Enum['keep-caps', 'keep-caps-locked', 'no-setuid-fixup', 'no-setuid-fixup-locked', 'noroot', 'noroot-locked']]],
   }]
 ```
 
